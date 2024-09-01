@@ -2,6 +2,8 @@ import Image from "next/image";
 
 import { strapiUrl, strapiApiUrl } from "@/config";
 
+import Markdown from "react-markdown";
+
 const getPost = async ( post: any ) => {
   // Fetch recent posts from the API
   const response = await fetch(`${strapiApiUrl}/blog-posts/${post.params.post}?populate=*`, 
@@ -23,6 +25,7 @@ export default async function Post(post: any) {
   const post_desc = postData?.post_desc;
   const post_content = postData?.post_content;
   const post_image = `${strapiUrl}${postData?.post_cover_image?.url}`;
+  const post_date = postData?.post_date_created;
 
 
   // If the post does not exist, redirect to 404
@@ -41,27 +44,29 @@ export default async function Post(post: any) {
 
 
   return (
-    <div className="page-index page">
+    <div className="page-post page">
         <div className="page-inner">
             <div className="page-header">
               <div className="page-header-image">
                 <div className="page-header-image-inner">
                   <div className="page-header-image-inner-content">
-                    <h1>{post_title}</h1>
-                    <p>The Blog</p>
+                    <h1>{ post_title }</h1>
+                    <p>{ post_desc }</p>
                   </div>
                 </div>
               </div>
 
               <div className="page-header-inner container">
                 <div className="page-header-content">
-                  <h1>Welcome to my Blog.</h1>
-                  <p>This is my safe space to write and express thoughts. I mainly talk about my chaotic life, relationships, technology, and more!</p>
+                  <h1>By James Latten</h1>
+                  <p>Posted: { post_date }</p>
                 </div>
               </div>
             </div>
-            <div className="page-content">
-                
+            <div className="page-content container">
+                <div className="page-header-content">
+                  <Markdown>{ post_content }</Markdown>
+                </div>
             </div>
         </div>
     </div>
