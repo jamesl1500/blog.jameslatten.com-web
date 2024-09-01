@@ -1,0 +1,181 @@
+@import 'includes/fonts.scss';
+@import 'includes/variables.scss';
+
+// Include bootstrap from NPM
+@import url('~bootstrap/dist/css/bootstrap.min.css');
+
+// Global Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-family;
+
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    font-family: $font-family;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        border-bottom: 1px solid $font-black;
+        color: inherit;
+    }
+}
+
+p{
+    font-family: $font-family;
+
+}
+
+// Header
+@import 'includes/header';
+
+// Footer
+@import 'includes/footer';
+
+// Sidebar
+@import 'includes/sidebar';
+
+// Pages
+@import 'includes/pages';
+
+// Overlay
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+
+    display: none;
+
+    &.active{
+        display: block;
+    }
+}
+
+// Componant: BlogPost
+.blog-post{
+
+    .blog-post-image{
+        margin-bottom: 10px;
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+// Home
+.page-index{
+
+    .page-inner{
+
+        .page-header{
+            border-bottom: 1px solid #eee;
+
+            .page-header-image{
+                display: block;
+                width: 100%;
+                height: 400px;
+
+                margin: 0 auto;
+
+                background: url(https://images.unsplash.com/photo-1491006443886-dab2ec6d0bec?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+                background-size: cover;
+                background-position: center;
+
+                .page-header-image-inner{
+                    background: rgba(0, 0, 0, 0.5);
+                    width: 100%;
+                    height: 100%;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    h1{
+                        color: white;
+                        font-size: 4em;
+                    }
+
+                    p{
+                        color: white;
+                        font-size: 2em;
+                    }
+                }
+            }
+
+            .page-header-inner{
+                margin-bottom: 50px;
+
+                .page-header-content{
+                    text-align: left;
+                    padding-top: 60px;
+
+                    img{
+                        display: block;
+                        width: 200px;
+                        height: auto;
+
+                        border-radius: 50%;
+
+                        margin-bottom: 50px;
+                    }
+
+                    h1{
+                        font-size: 2em;
+                        color:$font-black;
+                        margin-bottom: 20px;
+                    }
+
+                    p{
+                        font-size: 1.5em;
+                        color: $font-black;
+                    }
+                }
+            }
+        }
+
+        .page-content{
+            padding: 40px 0px;
+
+            .page-content-inner{
+
+                .page-content-inner-header{
+                    padding: 10px 0px;
+
+                    h1{
+                        font-size: 1.5em;
+                        margin: 0;
+                    }
+                }
+
+                .page-content-inner-content  {
+                    // Create a grid layout
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                    grid-gap: 20px;
+
+
+                }
+            }
+        }
+    }
+}
+

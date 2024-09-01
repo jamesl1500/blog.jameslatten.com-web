@@ -1,0 +1,98 @@
+// Header
+.header-main{
+    display: block;
+    height: 70px;
+
+    display: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+
+    z-index: 10001;
+
+    .header-inner{
+
+        .header-row{
+
+            .header-branding{
+
+                .header-logo{
+
+                    a{
+
+                        img{
+                            display: block;
+                            width: 50px;
+                            height: auto;
+
+                            margin: 10px 0;
+
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+
+            .header-name{
+
+                .header-name-inner{
+                    text-align: center;
+                    padding-top: 15px;
+
+                    h1{
+                        font-size: 1em;
+                        margin:  0;
+                    }
+
+                    p{
+                        font-size: 1em;
+                        font-weight: bold;
+                        margin-top: 8px;
+                    }
+                }
+            }
+
+            .header-nav{
+                
+                .header-nav-inner{
+
+                    nav.header-nav-parent{
+
+                        ul{
+                            list-style: none;
+                            padding: 0;
+                            margin: 20px 10px;
+
+                            text-align: right;
+
+                            display: flex;
+                            justify-content: flex-end;
+                            gap: 20px;
+
+                            li{
+                                display: inline-block;
+                                cursor: pointer;
+
+
+                                &.sidebar-open{
+
+                                    span{
+                                        // Bar line lines
+                                        display: block;
+                                        width: 30px;
+                                        height: 3px;
+
+                                        background-color: $font-black;
+
+                                        margin: 5px 0;
+                                        border-radius: 22px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

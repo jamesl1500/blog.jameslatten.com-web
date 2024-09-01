@@ -1,0 +1,28 @@
+/**
+* Pages
+*/
+.page{
+    background-color: white;
+    color: $font-black;
+    font-family: $font-family;
+
+    .page-inner{
+
+        .page-header{
+
+            .page-header-image{
+                display: block;
+                width: 100%;
+                height: 500px;
+
+                margin: 0 auto;
+            }
+
+            .page-header-inner{
+                margin-bottom: 50px;
+            }
+
+
+        }
+    }
+}
