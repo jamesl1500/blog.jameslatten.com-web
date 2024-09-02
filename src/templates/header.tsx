@@ -13,8 +13,8 @@ import logo from "../static/images/favicon.png";
 
 const Header = () => {
     const openSidebar = () => {
-        const sidebar = document.querySelector(".sidebar");
-        const overlay = document.querySelector(".overlay");
+        const sidebar = document.querySelector(".sidebar")!;
+        const overlay = document.querySelector(".overlay")!;
 
         sidebar.classList.toggle("active");
         overlay.classList.toggle("active");
