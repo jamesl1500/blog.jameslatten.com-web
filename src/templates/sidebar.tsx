@@ -9,8 +9,8 @@ import React from "react";
 
 const Sidebar = () => {
   const closeSidebar = () => {
-    const sidebar = document.querySelector(".sidebar");
-    const overlay = document.querySelector(".overlay");
+    const sidebar = document.querySelector(".sidebar")!;
+    const overlay = document.querySelector(".overlay")!;
 
     sidebar.classList.remove("active");
     overlay.classList.remove("active");
