@@ -9,6 +9,8 @@ import Header from "../templates/header";
 import Footer from "../templates/footer";
 import Sidebar from "../templates/sidebar";
 
+import Script from 'next/script'
+
 // Root layout
 export default function RootLayout({
   children,
@@ -32,7 +34,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#fff" />
 
         {/* Font Awesome */}
-        <script src="https://kit.fontawesome.com/8ea51260da.js" crossOrigin="anonymous"></script>
+        <Script src="https://kit.fontawesome.com/8ea51260da.js" crossOrigin="anonymous"></Script>
       </head>
       <body>
         <div className="website">
