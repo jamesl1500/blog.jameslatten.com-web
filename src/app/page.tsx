@@ -11,7 +11,11 @@ export default function Home() {
     // Fetch recent posts from the API
     const response = await fetch(`${strapiApiUrl}/blog-posts?populate=*`, 
     {
-      method: "GET"
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      cache: "no-cache",
     });
 
     const data = await response.json();

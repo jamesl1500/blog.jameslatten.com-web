@@ -8,7 +8,11 @@ const getPost = async ( post: any ) => {
   // Fetch recent posts from the API
   const response = await fetch(`${strapiApiUrl}/blog-posts/${post.params.post}?populate=*`, 
   {
-    method: "GET"
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    cache: "no-cache",
   });
 
   const data = await response.json();
