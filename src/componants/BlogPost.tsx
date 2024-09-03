@@ -21,6 +21,7 @@ const BlogPost = (props: BlogPostProps) => {
     const post_url = `/post/${props.post.documentId}`;
 
     const post_image = `${strapiUrl}${props.post.post_cover_image.url}`;
+    
 
     return (
         <div className="blog-post">
